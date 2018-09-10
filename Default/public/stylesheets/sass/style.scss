@@ -1,0 +1,44 @@
+// CSS FILE
+$primary-color: #ffffb3;
+$font-style: arial, sans-serif;
+
+body {
+    background-color: $primary-color;
+    padding: 0;
+    margin: 0;
+    font-family: $font-style;
+    width: 100%;
+    height: 100%;
+}
+
+.page__content {
+    display: flex;
+    justify-content: center;
+}
+
+.slide-container {
+    margin-top: 4.6%;
+    margin-bottom: 4.6%;
+}
+
+.btn {
+    cursor: pointer;
+    font-weight: bold;
+    background: white;
+    opacity: 0.5;
+    border: none;
+    position: absolute;
+
+    &--prev {
+
+    }
+
+    &--next {
+        right: 0;
+    }
+}
+
+.slide__img {
+    height: 500px;
+    width: 650px;
+}
