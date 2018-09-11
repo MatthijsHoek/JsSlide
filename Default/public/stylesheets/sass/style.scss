@@ -1,5 +1,6 @@
 // CSS FILE
 $primary-color: #ffffb3;
+$secondary-color: #ffcc00;
 $font-style: arial, sans-serif;
 
 body {
@@ -21,21 +22,35 @@ body {
     margin-bottom: 4.6%;
 }
 
-.btn {
+.slide__btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns {
     cursor: pointer;
     font-weight: bold;
-    background: white;
-    opacity: 0.5;
-    border: none;
-    position: absolute;
+    background: black;
+    border-radius: 100%;
+    border: $secondary-color;
+    padding: 10px;
 
+    
     &--prev {
 
     }
 
-    &--next {
-        right: 0;
+    &--pause {
+
     }
+
+    &--next {
+        float: right;
+    }
+}
+
+.fa__icons {
+    color: $secondary-color;
 }
 
 .slide__img {
