@@ -1,3 +1,3 @@
 # JsSlide
 
-Opdracht JsSlide (ES5).
+Opdracht JsSlide (ES5 & ES6).
