@@ -1,40 +1,38 @@
 /* Javascript */
 
-document.querySelector(".btns--prev").addEventListener("click", imgPrev);
-document.querySelector(".btns--next").addEventListener("click", imgNext);
-document.querySelector(".btns--pause").addEventListener("click", imgPause);
-
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', event => {
     if (event.keyCode == 37) {
         imgNext();
     }
 });
 
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', event => {
     if (event.keyCode == 39) {
         imgPrev();
     }
 });
 
-var imgArr = [
+let imgArr = [
     "img/stage1.jpg",
     "img/stage2.jpg",
     "img/stage3.jpg",
 ];
 
-var index = 0;
-var pause = true;
-var imgRun = setInterval(switchImg, 2000);
+let index = 0;
+let pause = true;
 
-function switchImg() {
+
+const switchImg = () => {
     document.querySelector(".slide__img").src = imgArr[index];
     index < imgArr.length-1 ? index++ : index = 0;
     console.log(index);
 }
 
+let imgRun = setInterval(switchImg, 2000);
+
 switchImg();
 
-function imgNext() {
+const imgNext = () => {
     clearInterval(imgRun);
     index++;
     if (index > imgArr.length-1) {
@@ -45,7 +43,7 @@ function imgNext() {
     console.log(index);
 }
 
-function imgPrev() {
+const imgPrev = () => {
     clearInterval(imgRun);
     index = index - 1;
     if (index < 0) {
@@ -56,7 +54,7 @@ function imgPrev() {
     console.log(index);
 }
 
-function imgPause() {
+const imgPause = () => {
     if (pause) {
         pause = false;
         clearInterval(imgRun);
@@ -65,3 +63,7 @@ function imgPause() {
         imgRun = setInterval(switchImg, 2000);
     }
 }
+
+document.querySelector(".btns--prev").addEventListener("click", imgPrev);
+document.querySelector(".btns--next").addEventListener("click", imgNext);
+document.querySelector(".btns--pause").addEventListener("click", imgPause);
