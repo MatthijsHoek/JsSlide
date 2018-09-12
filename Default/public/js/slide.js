@@ -24,6 +24,7 @@ let pause = true;
 const switchImg = () => {
     document.querySelector(".slide__img").src = imgArr[index];
     index < imgArr.length-1 ? index++ : index = 0;
+    //  index = (index+1) % imgArr.length;
     console.log(index);
 }
 
