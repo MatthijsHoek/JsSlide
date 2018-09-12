@@ -15,34 +15,26 @@ body {
 .page__content {
     display: flex;
     justify-content: center;
+    
 }
 
 .slide-container {
     margin-top: 4.6%;
     margin-bottom: 4.6%;
+    
 }
 
 .slide__btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .btns {
     cursor: pointer;
     font-weight: bold;
     background: black;
-    border-radius: 100%;
     border: $secondary-color;
-    padding: 10px;
-
-    
-    &--prev {
-
-    }
-
-    &--pause {
-
-    }
+    padding: 10px 15px;
 
     &--next {
         float: right;
